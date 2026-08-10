@@ -1118,6 +1118,10 @@ export async function handleComboChat({
             model: modelStr,
             timestamp: Date.now(),
             strategy,
+            attempt: retry,
+            isRetry: retry > 0,
+            fallbackCount,
+            comboExecutionKey: target.executionKey || undefined,
           });
           // QA P0 diagnostics: capture the attempt order (provider/model ids only).
           comboAttemptOrder.push({ provider: provider ?? "unknown", model: modelStr });
@@ -1277,6 +1281,10 @@ export async function handleComboChat({
                 model: modelStr,
                 error: `Quality: ${quality.reason}`,
                 latencyMs: Date.now() - startTime,
+                attempt: retry,
+                isRetry: retry > 0,
+                fallbackCount,
+                comboExecutionKey: target.executionKey || undefined,
               });
               return null;
             }
@@ -1302,6 +1310,10 @@ export async function handleComboChat({
               provider,
               model: modelStr,
               latencyMs,
+              attempt: retry,
+              isRetry: retry > 0,
+              fallbackCount,
+              comboExecutionKey: target.executionKey || undefined,
             });
             log.info(
               "COMBO",

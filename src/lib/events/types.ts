@@ -63,6 +63,10 @@ export interface ComboTargetAttemptPayload {
   model: string;
   timestamp: number;
   strategy: string;
+  attempt?: number;
+  isRetry?: boolean;
+  fallbackCount?: number;
+  comboExecutionKey?: string;
 }
 
 export interface ComboTargetFailedPayload {
@@ -72,6 +76,10 @@ export interface ComboTargetFailedPayload {
   model: string;
   error: string;
   latencyMs: number;
+  attempt?: number;
+  isRetry?: boolean;
+  fallbackCount?: number;
+  comboExecutionKey?: string;
 }
 
 export interface ComboTargetSucceededPayload {
@@ -80,6 +88,10 @@ export interface ComboTargetSucceededPayload {
   provider: string;
   model: string;
   latencyMs: number;
+  attempt?: number;
+  isRetry?: boolean;
+  fallbackCount?: number;
+  comboExecutionKey?: string;
 }
 
 export interface CredentialHealthChangedPayload {
