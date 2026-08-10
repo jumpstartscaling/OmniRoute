@@ -487,6 +487,12 @@ function isSchemaAlreadyApplied(
       // but still burn a version-tracking slot mismatch — guard it the same
       // way as the other renumbers for consistency.
       return hasTable(db, "connection_runtime_state");
+    case "143":
+      // Retroactive guard for the routing-event ledger migration renumbered
+      // from 134 -> 143. Upstream already owns 134_proxy_logs_egress_ip;
+      // deployments that applied the telemetry fork under the old 134 slot
+      // already have this table and must not re-run the migration.
+      return hasTable(db, "routing_event_ledger");
     default:
       return false;
   }

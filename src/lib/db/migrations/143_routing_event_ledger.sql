@@ -1,5 +1,6 @@
 -- Persist the provider-routing events already emitted by the runtime.
 -- This is metadata only: no request bodies, credentials, or provider payloads.
+-- Numbered 143 because upstream owns migration 134_proxy_logs_egress_ip.
 CREATE TABLE IF NOT EXISTS routing_event_ledger (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   event TEXT NOT NULL,
