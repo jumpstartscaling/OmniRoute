@@ -19,6 +19,7 @@ import {
   type DashboardEventMap,
   type DashboardEventListener,
 } from "./types";
+import { persistRoutingEvent, type RoutingEventPayload } from "../usage/routingEvents";
 
 // ── State (globalThis singleton) ──────────────────────────────────────────
 
@@ -82,6 +83,10 @@ export function emit<E extends DashboardEventName>(event: E, payload: DashboardE
   state.history.push(entry);
   if (state.history.length > state.maxHistory) {
     state.history.shift();
+  }
+
+  if (event === "combo.target.attempt" || event === "combo.target.failed" || event === "combo.target.succeeded") {
+    setImmediate(() => persistRoutingEvent(event, payload as RoutingEventPayload));
   }
 
   // Notify specific listeners
