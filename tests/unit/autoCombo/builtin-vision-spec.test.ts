@@ -31,7 +31,7 @@ describe("resolveBuiltinAutoSpec — vision category ids", () => {
       variant: "coding",
     });
     expect(resolveBuiltinAutoSpec("auto/fast", "fast")).toEqual({ variant: "fast" });
-    expect(resolveBuiltinAutoSpec("auto/chat", "chat")).toEqual({ variant: undefined });
+    expect(resolveBuiltinAutoSpec("auto/chat", "chat")).toEqual({ category: "chat" });
   });
 
   it("category:tier suffix still resolves via parseAutoSuffix", () => {
@@ -40,5 +40,17 @@ describe("resolveBuiltinAutoSpec — vision category ids", () => {
       tier: "fast",
     });
     expect(resolveBuiltinAutoSpec("auto/vision", "vision")).toEqual({ category: "vision" });
+  });
+});
+
+describe("resolveBuiltinAutoSpec — chat category ids", () => {
+  it("resolves chat templates to the chat category", () => {
+    expect(resolveBuiltinAutoSpec("auto/best-chat", "best-chat")).toEqual({
+      category: "chat",
+    });
+    expect(resolveBuiltinAutoSpec("auto/pro-chat", "pro-chat")).toEqual({
+      category: "chat",
+      tier: "pro",
+    });
   });
 });

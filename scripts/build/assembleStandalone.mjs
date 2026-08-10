@@ -136,6 +136,14 @@ const EXTRA_MODULE_ENTRIES = [
     src: ["node_modules", "pino-pretty"],
     dest: ["node_modules", "pino-pretty"],
   },
+  {
+    // pino-pretty resolves real-require at runtime. Turbopack can preserve the
+    // package directory while omitting its `src/` entrypoint, which then makes
+    // log transport failures appear only after the server has started.
+    label: "real-require",
+    src: ["node_modules", "real-require"],
+    dest: ["node_modules", "real-require"],
+  },
   { label: "split2", src: ["node_modules", "split2"], dest: ["node_modules", "split2"] },
   { label: "migrations", src: ["src", "lib", "db", "migrations"], dest: ["migrations"] },
   { label: "MITM server", src: ["src", "mitm", "server.cjs"], dest: ["src", "mitm", "server.cjs"] },

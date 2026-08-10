@@ -133,6 +133,15 @@ const VISION_CATEGORY_AUTO_IDS: Record<string, { category: "vision"; tier?: Auto
   "auto/pro-vision": { category: "vision", tier: "pro" },
 };
 
+// Chat templates are category selectors, not an undefined legacy variant.
+// Keeping them explicit prevents the advertised ids from being logged as
+// "Unknown built-in auto combo" during catalog materialization.
+const CHAT_CATEGORY_AUTO_IDS: Record<string, { category: "chat"; tier?: AutoTier }> = {
+  "auto/best-chat": { category: "chat" },
+  "auto/pro-chat": { category: "chat", tier: "pro" },
+  "auto/chat": { category: "chat" },
+};
+
 /**
  * Pure resolver for a built-in `auto/*` id. Extracted from
  * `createBuiltinAutoCombo` so the catalog mapping is unit-testable without
@@ -141,6 +150,9 @@ const VISION_CATEGORY_AUTO_IDS: Record<string, { category: "vision"; tier?: Auto
 export function resolveBuiltinAutoSpec(modelStr: string, suffix: string): BuiltinAutoSpec {
   const visionSpec = VISION_CATEGORY_AUTO_IDS[modelStr];
   if (visionSpec) return visionSpec;
+
+  const chatSpec = CHAT_CATEGORY_AUTO_IDS[modelStr];
+  if (chatSpec) return chatSpec;
 
   const resolved = resolveAutoVariant(modelStr, suffix);
   if (resolved.recognized) {
