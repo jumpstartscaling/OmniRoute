@@ -37,6 +37,7 @@ function timestamp(value: unknown): number {
 export function persistRoutingEvent(event: RoutingEventName, payload: RoutingEventPayload): void {
   try {
     const db = getDbInstance();
+    const row = normalizeRoutingEventPayload(event, payload);
     db.prepare(
       `
         INSERT INTO routing_event_ledger (
@@ -47,25 +48,32 @@ export function persistRoutingEvent(event: RoutingEventName, payload: RoutingEve
           @provider, @model, @attempt, @isRetry, @fallbackCount, @error, @latencyMs
         )
       `
-    ).run({
-      event,
-      timestamp: timestamp(payload.timestamp),
-      comboName: text(payload.comboName, "unknown"),
-      comboExecutionKey: typeof payload.comboExecutionKey === "string"
-        ? payload.comboExecutionKey.trim().slice(0, 200) || null
-        : null,
-      targetIndex: integer(payload.targetIndex),
-      provider: text(payload.provider, "unknown"),
-      model: text(payload.model, "unknown"),
-      attempt: integer(payload.attempt),
-      isRetry: payload.isRetry === true ? 1 : 0,
-      fallbackCount: integer(payload.fallbackCount),
-      error: typeof payload.error === "string" ? payload.error.slice(0, 500) : null,
-      latencyMs: payload.latencyMs == null ? null : integer(payload.latencyMs),
-    });
+    ).run(row);
   } catch {
     // Routing telemetry must never affect the provider response path.
   }
+}
+
+export function normalizeRoutingEventPayload(
+  event: RoutingEventName,
+  payload: RoutingEventPayload
+): Record<string, string | number | null> {
+  return {
+    event,
+    timestamp: timestamp(payload.timestamp),
+    comboName: text(payload.comboName, "unknown"),
+    comboExecutionKey: typeof payload.comboExecutionKey === "string"
+      ? payload.comboExecutionKey.trim().slice(0, 200) || null
+      : null,
+    targetIndex: integer(payload.targetIndex),
+    provider: text(payload.provider, "unknown"),
+    model: text(payload.model, "unknown"),
+    attempt: integer(payload.attempt),
+    isRetry: payload.isRetry === true ? 1 : 0,
+    fallbackCount: integer(payload.fallbackCount),
+    error: typeof payload.error === "string" ? payload.error.slice(0, 500) : null,
+    latencyMs: payload.latencyMs == null ? null : integer(payload.latencyMs),
+  };
 }
 
 export function getRoutingEvents({ hours = 24, limit = 1000 } = {}): Array<Record<string, unknown>> {
