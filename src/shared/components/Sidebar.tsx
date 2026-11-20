@@ -85,7 +85,7 @@ export default function Sidebar({
     const accent = getSidebarIconAccent(itemId);
     return {
       "--sidebar-icon-accent": accent,
-      color: accent,
+      color: "var(--jos-accent-ink)",
     };
   };
   const pathname = usePathname();
@@ -692,7 +692,7 @@ export default function Sidebar({
             title={t("shutdown")}
             className={cn(
               "flex items-center justify-center gap-2 rounded-lg font-medium transition-all",
-              "text-red-500 hover:bg-red-500/10 border border-red-500/20 hover:border-red-500/40",
+              "text-error hover:bg-error/10 border border-error/40",
               collapsed ? "p-2" : "flex-1 min-w-0 px-2 py-1.5 text-xs"
             )}
           >

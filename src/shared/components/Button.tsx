@@ -10,7 +10,7 @@ const variants = {
   outline: "border border-border text-text-main hover:bg-black/5 dark:hover:bg-white/10",
   ghost: "text-text-muted hover:bg-black/5 dark:hover:bg-white/10 hover:text-text-main",
   warning: "jos-warning-fill hover:brightness-110",
-  danger: "bg-red-500 text-white hover:bg-red-600 shadow-sm",
+  danger: "jos-warning-fill hover:brightness-110",
 };
 
 export type ButtonVariant = keyof typeof variants;

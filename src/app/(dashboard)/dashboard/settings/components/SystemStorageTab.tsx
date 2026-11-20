@@ -1489,7 +1489,7 @@ export default function SystemStorageTab() {
 
       <div className="flex items-center justify-between p-3 rounded-lg bg-bg border border-border mb-4">
         <div className="flex items-center gap-2">
-          <span className="material-symbols-outlined text-[16px] text-amber-500" aria-hidden="true">
+          <span className="material-symbols-outlined text-[16px] text-primary" aria-hidden="true">
             schedule
           </span>
           <div>

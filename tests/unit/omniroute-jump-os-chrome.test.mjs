@@ -41,10 +41,19 @@ describe("Jump OS chrome", () => {
     assert.match(tokens, /--jos-accent-ink: #f6c445;/);
     assert.match(tokens, /--jos-status-warning-text: #9a3412;/);
     assert.match(tokens, /--jos-status-warning-text: #f6c7a8;/);
-    assert.equal(tokens.includes("#f6c445;") && tokens.includes("--jos-status-warning-text: #f6c445;"), false);
+    assert.equal(
+      tokens.includes("#f6c445;") && tokens.includes("--jos-status-warning-text: #f6c445;"),
+      false
+    );
     assert.doesNotMatch(pkg, /@jumpstartscaling\/ui-/);
-    assert.match(read("src/styles/vendor/jump-os-ui/jos-ui.css"), /@import "\.\/jump-os\.tokens\.css"/);
-    assert.doesNotMatch(read("src/styles/vendor/jump-os-ui/jos-ui.css"), /@jumpstartscaling\/ui-tokens/);
+    assert.match(
+      read("src/styles/vendor/jump-os-ui/jos-ui.css"),
+      /@import "\.\/jump-os\.tokens\.css"/
+    );
+    assert.doesNotMatch(
+      read("src/styles/vendor/jump-os-ui/jos-ui.css"),
+      /@jumpstartscaling\/ui-tokens/
+    );
   });
 
   it("applies the chrome from the root layout that wraps every screen", () => {
@@ -77,7 +86,14 @@ describe("second pass", () => {
   it("keeps warning off the amber fill and black type on that fill", () => {
     assert.match(chrome, /color: var\(--jos-accent-ink\)/);
     assert.match(chrome, /color: #000000/);
+    assert.match(chrome, /\.from-primary \.text-white/);
     assert.match(chrome, /background: #9a3412/);
+    assert.doesNotMatch(read("src/shared/components/Breadcrumbs.tsx"), /#818cf8|#e0e0e0/);
+    assert.match(read("src/app/login/page.tsx"), /text-black text-\[20px\]/);
+    assert.doesNotMatch(
+      read("src/app/(dashboard)/dashboard/BootstrapBanner.tsx"),
+      /amber-500|amber-50|amber-900/
+    );
     assert.doesNotMatch(read("src/shared/components/Button.tsx"), /bg-amber-500/);
     assert.match(read("src/shared/components/Button.tsx"), /bg-primary text-black/);
     assert.match(read("src/shared/components/Button.tsx"), /jos-warning-fill/);

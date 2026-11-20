@@ -89,7 +89,7 @@ export default function KimiSponsorBanner() {
             target="_blank"
             rel="noopener noreferrer"
             title={t("partnerLinkNote")}
-            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-[#1783FF] px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:brightness-110"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-[#1783FF] px-3 py-1.5 text-xs font-semibold text-black transition-colors hover:brightness-110"
           >
             {t("cta")}
             <span className="material-symbols-outlined text-[14px]" aria-hidden="true">

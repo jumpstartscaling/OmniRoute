@@ -1130,7 +1130,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                 </div>
               </li>
               <li className="rounded-lg border border-border bg-bg-subtle p-4 flex gap-3">
-                <div className="flex items-center justify-center size-8 rounded-lg bg-green-500/10 text-green-500 shrink-0">
+                <div className="flex items-center justify-center size-8 rounded-lg bg-primary/10 text-primary shrink-0">
                   <span className="material-symbols-outlined text-[18px]">dns</span>
                 </div>
                 <div>
@@ -1147,7 +1147,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                 </div>
               </li>
               <li className="rounded-lg border border-border bg-bg-subtle p-4 flex gap-3">
-                <div className="flex items-center justify-center size-8 rounded-lg bg-blue-500/10 text-blue-500 shrink-0">
+                <div className="flex items-center justify-center size-8 rounded-lg bg-primary/10 text-primary shrink-0">
                   <span className="material-symbols-outlined text-[18px]">link</span>
                 </div>
                 <div>
@@ -1158,7 +1158,7 @@ export default function HomePageClient({ machineId }: HomePageClientProps) {
                 </div>
               </li>
               <li className="rounded-lg border border-border bg-bg-subtle p-4 flex gap-3">
-                <div className="flex items-center justify-center size-8 rounded-lg bg-amber-500/10 text-amber-500 shrink-0">
+                <div className="flex items-center justify-center size-8 rounded-lg bg-primary/10 text-primary shrink-0">
                   <span className="material-symbols-outlined text-[18px]">analytics</span>
                 </div>
                 <div>

@@ -42,7 +42,11 @@ html.jos-ui .via-primary {
 html.jos-ui .bg-primary.text-white,
 html.jos-ui .from-primary.text-white,
 html.jos-ui a.bg-primary,
-html.jos-ui button.bg-primary {
+html.jos-ui button.bg-primary,
+html.jos-ui .bg-primary .text-white,
+html.jos-ui .from-primary .text-white,
+html.jos-ui .to-primary .text-white,
+html.jos-ui .via-primary .text-white {
   color: #000000;
 }
 
