@@ -6,7 +6,7 @@ import { Handle, Position, type NodeProps } from "@xyflow/react";
 
 const STRATEGY_COLORS: Record<string, string> = {
   priority: "#3b82f6",
-  weighted: "#8b5cf6",
+  weighted: "#7a4e00",
   "round-robin": "#06b6d4",
   "fill-first": "#f59e0b",
   p2c: "#10b981",
@@ -15,8 +15,8 @@ const STRATEGY_COLORS: Record<string, string> = {
   "cost-optimized": "#22c55e",
   "reset-aware": "#f97316",
   "reset-window": "#f97316",
-  "strict-random": "#a855f7",
-  auto: "#6366f1",
+  "strict-random": "#7a4e00",
+  auto: "#f6c445",
   lkgp: "#ec4899",
   "context-optimized": "#14b8a6",
   "context-relay": "#0ea5e9",

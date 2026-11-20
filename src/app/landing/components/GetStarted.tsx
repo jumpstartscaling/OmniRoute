@@ -19,7 +19,7 @@ export default function GetStarted() {
   };
 
   return (
-    <section className="py-24 px-6 bg-[#080A0F]">
+    <section className="py-24 px-6 bg-[#000000]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Left: Steps */}
@@ -29,7 +29,7 @@ export default function GetStarted() {
 
             <div className="flex flex-col gap-6">
               <div className="flex gap-4 min-w-0">
-                <div className="flex-none w-8 h-8 rounded-full bg-[#E54D5E]/20 text-[#E54D5E] flex items-center justify-center font-bold">
+                <div className="flex-none w-8 h-8 rounded-full bg-[#f6c445]/20 text-[#f6c445] flex items-center justify-center font-bold">
                   1
                 </div>
                 <div>
@@ -39,7 +39,7 @@ export default function GetStarted() {
               </div>
 
               <div className="flex gap-4 min-w-0">
-                <div className="flex-none w-8 h-8 rounded-full bg-[#E54D5E]/20 text-[#E54D5E] flex items-center justify-center font-bold">
+                <div className="flex-none w-8 h-8 rounded-full bg-[#f6c445]/20 text-[#f6c445] flex items-center justify-center font-bold">
                   2
                 </div>
                 <div>
@@ -49,7 +49,7 @@ export default function GetStarted() {
               </div>
 
               <div className="flex gap-4 min-w-0">
-                <div className="flex-none w-8 h-8 rounded-full bg-[#E54D5E]/20 text-[#E54D5E] flex items-center justify-center font-bold">
+                <div className="flex-none w-8 h-8 rounded-full bg-[#f6c445]/20 text-[#f6c445] flex items-center justify-center font-bold">
                   3
                 </div>
                 <div>
@@ -64,9 +64,9 @@ export default function GetStarted() {
 
           {/* Right: Code block */}
           <div className="flex-1 w-full">
-            <div className="rounded-xl overflow-hidden bg-[#161B22] border border-[#2D333B] shadow-2xl">
+            <div className="rounded-xl overflow-hidden bg-[#161B22] border border-white shadow-2xl">
               {/* Terminal header */}
-              <div className="flex items-center gap-2 px-4 py-3 bg-[#111520] border-b border-gray-700">
+              <div className="flex items-center gap-2 px-4 py-3 bg-[#000000] border-b border-gray-700">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
@@ -87,12 +87,12 @@ export default function GetStarted() {
                 </div>
 
                 <div className="text-gray-400 mb-6">
-                  <span className="text-[#E54D5E]">&gt;</span> {t("startingOmniRoute")}
+                  <span className="text-[#f6c445]">&gt;</span> {t("startingOmniRoute")}
                   <br />
-                  <span className="text-[#E54D5E]">&gt;</span> {t("serverRunningOnLabel")}{" "}
+                  <span className="text-[#f6c445]">&gt;</span> {t("serverRunningOnLabel")}{" "}
                   <span className="text-blue-400 break-all">{endpoint}</span>
                   <br />
-                  <span className="text-[#E54D5E]">&gt;</span> {t("dashboardLabel")}:{" "}
+                  <span className="text-[#f6c445]">&gt;</span> {t("dashboardLabel")}:{" "}
                   <span className="text-blue-400 break-all">{dashboardUrl}</span>
                   <br />
                   <span className="text-green-400">&gt;</span> {t("readyToRoute")}
@@ -103,7 +103,7 @@ export default function GetStarted() {
                 </div>
 
                 <div className="text-gray-400 text-xs">
-                  <span className="text-purple-400">{t("dataLocation")}</span>
+                  <span className="text-[#f6c445]">{t("dataLocation")}</span>
                   <br />
                   <span className="text-gray-500">{t("dataLocationMacLinux")}</span>{" "}
                   <span className="break-all">~/.omniroute/db.json</span>

@@ -1,0 +1,11 @@
+.jos-ui[data-density="compact"] {
+  --jos-font-body: 14px;
+  --jos-font-label: 12px;
+}
+.jos-ui[data-density="compact"] .jos-command-strip {
+  padding: var(--jos-space-2) var(--jos-space-3);
+}
+.jos-ui[data-density="compact"] .jos-btn { min-height: 36px; }
+@media (prefers-reduced-motion: reduce) {
+  .jos-ui * { animation: none !important; transition: none !important; }
+}

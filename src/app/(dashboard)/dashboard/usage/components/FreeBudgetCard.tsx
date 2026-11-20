@@ -135,14 +135,14 @@ const DEFAULT_LABELS: FreeBudgetLabels = {
 
 // Distinct hues for stacked bar segments (cycling)
 const BAR_HUES = [
-  "#6366f1",
+  "#f6c445",
   "#10b981",
   "#f59e0b",
   "#3b82f6",
   "#ec4899",
   "#14b8a6",
   "#f97316",
-  "#8b5cf6",
+  "#7a4e00",
   "#06b6d4",
   "#84cc16",
 ];

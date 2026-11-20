@@ -90,7 +90,7 @@ export default function ColumnToggle({ columns = [], visible = {}, onToggle }) {
                 type="checkbox"
                 checked={visible[col.key] ?? true}
                 onChange={() => onToggle(col.key)}
-                style={{ accentColor: "#6366f1" }}
+                style={{ accentColor: "var(--jos-accent-fill, #f6c445)" }}
               />
               {col.label}
             </label>

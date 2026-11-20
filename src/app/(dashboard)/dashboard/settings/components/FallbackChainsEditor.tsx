@@ -14,11 +14,11 @@ import { useNotificationStore } from "@/store/notificationStore";
 import { useTranslations } from "next-intl";
 
 const CHAIN_COLORS = [
-  "#6366f1",
+  "#f6c445",
   "#22c55e",
   "#f59e0b",
   "#ef4444",
-  "#8b5cf6",
+  "#7a4e00",
   "#06b6d4",
   "#ec4899",
   "#14b8a6",

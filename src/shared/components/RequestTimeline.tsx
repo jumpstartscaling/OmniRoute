@@ -70,7 +70,7 @@ function formatTimeAxis(ms: number): string {
 }
 
 function getStatusColor(status: number, active: boolean | undefined): string {
-  if (active) return "#6366F1";
+  if (active) return "#f6c445";
   return getHttpStatusStyle(status).bg;
 }
 
@@ -559,7 +559,7 @@ export default function RequestTimeline({
                 title={MODE_META[m].description}
                 className={`px-2.5 py-1 text-[11px] font-medium transition-colors ${
                   mode === m
-                    ? "bg-primary text-white"
+                    ? "bg-primary text-black"
                     : "bg-bg-subtle text-text-muted hover:text-text-main"
                 }`}
               >
@@ -798,7 +798,7 @@ export default function RequestTimeline({
           <span className="text-text-muted">5xx</span>
         </div>
         <div className="flex items-center gap-1">
-          <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "#6366F1" }} />
+          <div className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: "#f6c445" }} />
           <span className="text-text-muted">Active</span>
         </div>
         <div className="flex items-center gap-1">

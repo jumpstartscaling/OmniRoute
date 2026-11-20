@@ -18,7 +18,7 @@ export interface RequestNodeData {
  */
 export function RequestNode({ data }: NodeProps) {
   const { comboName } = data as RequestNodeData;
-  const color = "#6366f1"; // indigo — matches IoNode input color
+  const color = "#f6c445"; // amber fill — matches IoNode input color
 
   return (
     <div

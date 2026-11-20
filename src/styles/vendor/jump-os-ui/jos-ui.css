@@ -1,0 +1,9 @@
+/* @jumpstartscaling/ui-foundations — scoped to .jos-ui */
+/* Vendored from jumpstartscaling/jump-os-ui 204d6c924e8a1adbdc9b667a461e7f304f7a701e.
+   The package import is a relative file so OmniRoute does not take a dependency. */
+@import "./jump-os.tokens.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./layout.css";
+@import "./controls.css";
+@import "./density.css";

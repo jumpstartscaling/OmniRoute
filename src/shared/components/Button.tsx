@@ -3,13 +3,13 @@
 import { cn } from "@/shared/utils/cn";
 
 const variants = {
-  primary: "bg-[image:var(--grad-brand)] text-white shadow-sm hover:brightness-105",
-  accent: "bg-accent text-white shadow-sm hover:bg-accent-hover",
+  primary: "bg-primary text-black hover:brightness-95",
+  accent: "bg-accent text-white dark:text-black hover:brightness-95",
   secondary:
-    "bg-white dark:bg-white/10 border border-black/10 dark:border-white/10 text-text-main hover:bg-black/5 dark:hover:bg-white/5",
-  outline: "border border-black/15 dark:border-white/15 text-text-main hover:bg-black/5",
-  ghost: "text-text-muted hover:bg-black/5 dark:hover:bg-white/5 hover:text-text-main",
-  warning: "bg-amber-500 text-white hover:bg-amber-600 shadow-sm",
+    "bg-white dark:bg-black border border-border text-text-main hover:bg-black/5 dark:hover:bg-white/10",
+  outline: "border border-border text-text-main hover:bg-black/5 dark:hover:bg-white/10",
+  ghost: "text-text-muted hover:bg-black/5 dark:hover:bg-white/10 hover:text-text-main",
+  warning: "jos-warning-fill hover:brightness-110",
   danger: "bg-red-500 text-white hover:bg-red-600 shadow-sm",
 };
 

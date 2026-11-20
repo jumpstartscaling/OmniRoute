@@ -1,0 +1,10 @@
+.jos-ui {
+  box-sizing: border-box;
+  color: var(--jos-ink);
+  background: var(--jos-canvas);
+  font-family: var(--jos-font-family);
+  font-size: var(--jos-font-body);
+  line-height: var(--jos-line-height-body);
+}
+.jos-ui *, .jos-ui *::before, .jos-ui *::after { box-sizing: inherit; }
+.jos-ui img, .jos-ui svg { display: block; max-width: 100%; }

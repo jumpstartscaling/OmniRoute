@@ -1,0 +1,71 @@
+.jos-ui .jos-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--jos-space-2);
+  min-height: 40px;
+  padding: 0 var(--jos-space-4);
+  border-radius: var(--jos-radius-control);
+  border: 1px solid var(--jos-border);
+  background: var(--jos-surface);
+  color: var(--jos-ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.jos-ui .jos-btn-primary {
+  border-color: var(--jos-accent-fill);
+  background: var(--jos-accent-fill);
+  color: var(--jos-accent-on-fill);
+}
+.jos-ui .jos-btn:focus-visible,
+.jos-ui .jos-seg button:focus-visible {
+  outline: var(--jos-focus-width) solid var(--jos-focus);
+  outline-offset: var(--jos-focus-offset);
+}
+.jos-ui .jos-seg {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--jos-border);
+  border-radius: var(--jos-radius-control);
+  background: color-mix(in srgb, var(--jos-ink) 5%, var(--jos-canvas));
+}
+.jos-ui .jos-seg button {
+  appearance: none;
+  min-height: 32px;
+  padding: 0 var(--jos-space-2);
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--jos-muted);
+  font: inherit;
+  font-size: var(--jos-font-label);
+  font-weight: 650;
+  cursor: pointer;
+}
+.jos-ui .jos-seg button[aria-pressed="true"],
+.jos-ui .jos-seg button.is-active {
+  background: var(--jos-accent-fill);
+  color: var(--jos-accent-on-fill);
+}
+.jos-ui .jos-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 var(--jos-space-2);
+  border-radius: var(--jos-radius-pill);
+  font-size: 11px;
+  font-weight: 800;
+}
+.jos-ui .jos-status-success { color: var(--jos-status-success-text); background: var(--jos-status-success-bg); }
+.jos-ui .jos-status-warning { color: var(--jos-status-warning-text); background: var(--jos-status-warning-bg); }
+.jos-ui .jos-status-failure { color: var(--jos-status-failure-text); background: var(--jos-status-failure-bg); }
+.jos-ui .jos-status-info { color: var(--jos-status-info-text); background: var(--jos-status-info-bg); }
+.jos-ui .jos-status-unknown {
+  color: var(--jos-status-unknown-text);
+  background: var(--jos-status-unknown-bg);
+  border: 1px solid var(--jos-border);
+}

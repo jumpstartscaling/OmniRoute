@@ -1,0 +1,62 @@
+/* Jump OS chrome bridge. Vendor files stay unmodified above this sheet.
+   Element resets from the vendor kit are restored so existing screens keep
+   their type scale and inline icons. Color comes from the tokens. */
+
+html.jos-ui {
+  font-family: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+html.jos-ui h1 {
+  margin: unset;
+  font-size: unset;
+  font-weight: unset;
+  letter-spacing: unset;
+  line-height: unset;
+  color: unset;
+}
+
+html.jos-ui img,
+html.jos-ui svg {
+  display: unset;
+  max-width: unset;
+}
+
+/* Amber words. The fill token stays on backgrounds. */
+html.jos-ui .text-primary,
+html.jos-ui .hover\:text-primary:hover,
+html.jos-ui .focus\:text-primary:focus,
+html.jos-ui .group:hover .group-hover\:text-primary {
+  color: var(--jos-accent-ink);
+}
+
+/* Amber fill keeps black text, including buttons that still say text-white. */
+html.jos-ui .bg-primary,
+html.jos-ui .from-primary,
+html.jos-ui .to-primary,
+html.jos-ui .via-primary {
+  color: #000000;
+}
+
+html.jos-ui .bg-primary.text-white,
+html.jos-ui .from-primary.text-white,
+html.jos-ui a.bg-primary,
+html.jos-ui button.bg-primary {
+  color: #000000;
+}
+
+html.jos-ui .jos-warning-text {
+  color: #9a3412;
+}
+
+html.dark.jos-ui .jos-warning-text,
+html.jos-ui[data-theme="dark"] .jos-warning-text {
+  color: #f6c7a8;
+}
+
+html.jos-ui .jos-warning-fill {
+  background: #9a3412;
+  color: #ffffff;
+  border-color: #9a3412;
+}

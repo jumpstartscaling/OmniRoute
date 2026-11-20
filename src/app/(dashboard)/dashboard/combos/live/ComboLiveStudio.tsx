@@ -308,7 +308,7 @@ export function ComboLiveStudio({
             {displayRun.strategy && (
               <span
                 className="text-xs px-1.5 py-0.5 rounded-full font-semibold"
-                style={{ backgroundColor: "#6366f120", color: "#6366f1" }}
+                style={{ backgroundColor: "#f6c44520", color: "#f6c445" }}
               >
                 {displayRun.strategy}
               </span>

@@ -205,7 +205,7 @@ export default function Header({
 
   return (
     <header
-      className="sticky top-0 z-10 flex items-center justify-between border-b border-black/5 bg-bg px-8 py-4 dark:border-white/5"
+      className="sticky top-0 z-10 flex items-center justify-between border-t-2 border-t-[#f6c445] border-b border-border bg-bg px-8 py-4"
       style={{
         paddingTop: isMacElectron ? "calc(1rem + var(--desktop-safe-top))" : undefined,
       }}

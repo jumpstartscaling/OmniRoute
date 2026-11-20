@@ -1,0 +1,28 @@
+.jos-ui h1, .jos-ui .jos-title {
+  margin: 0;
+  font-size: var(--jos-font-title);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--jos-ink);
+}
+.jos-ui .jos-eyebrow {
+  margin: 0 0 var(--jos-space-1);
+  font-size: var(--jos-font-label);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--jos-accent-ink);
+}
+.jos-ui .jos-lede {
+  margin: var(--jos-space-2) 0 0;
+  max-width: 62ch;
+  color: var(--jos-muted);
+  font-size: var(--jos-font-label);
+}
+.jos-ui .jos-metric-value {
+  font-size: var(--jos-font-metric);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}

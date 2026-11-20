@@ -75,25 +75,27 @@ function applyTheme(theme: string) {
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   const effectiveTheme = theme === "system" ? systemTheme : theme;
 
-  if (effectiveTheme === "dark") {
-    root.classList.add("dark");
-  } else {
-    root.classList.remove("dark");
-  }
+  const dark = effectiveTheme === "dark";
+  root.classList.toggle("dark", dark);
+  root.dataset.theme = dark ? "dark" : "light";
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute("content", dark ? "#000000" : "#ffffff");
 }
 
-function applyColorTheme(colorTheme: string, customColor: string) {
+function applyColorTheme(_colorTheme: string, _customColor: string) {
   if (typeof window === "undefined") return;
 
+  // Chrome is the Jump OS amber palette. Stored accent picks must not repaint it.
   const root = document.documentElement;
-  const baseColor =
-    colorTheme === "custom"
-      ? normalizeHexColor(customColor)
-      : COLOR_THEMES[colorTheme] || COLOR_THEMES.coral;
-  const hoverColor = shadeHexColor(baseColor, -0.14);
-
-  root.style.setProperty("--color-primary", baseColor);
-  root.style.setProperty("--color-primary-hover", hoverColor);
+  for (const name of [
+    "--color-primary",
+    "--color-primary-hover",
+    "--color-accent",
+    "--color-accent-hover",
+    "--color-accent-light",
+  ]) {
+    root.style.removeProperty(name);
+  }
 }
 
 function normalizeHexColor(color: string) {
@@ -101,23 +103,6 @@ function normalizeHexColor(color: string) {
   const hex = value.startsWith("#") ? value : `#${value}`;
   const valid = /^#([0-9a-fA-F]{6})$/.test(hex);
   return valid ? hex.toLowerCase() : "#3b82f6";
-}
-
-function shadeHexColor(hex: string, percent: number) {
-  const normalized = normalizeHexColor(hex).slice(1);
-  const r = parseInt(normalized.slice(0, 2), 16);
-  const g = parseInt(normalized.slice(2, 4), 16);
-  const b = parseInt(normalized.slice(4, 6), 16);
-
-  const shade = (channel: number) => {
-    const target = percent < 0 ? 0 : 255;
-    const amount = Math.round((target - channel) * Math.abs(percent));
-    const next = percent < 0 ? channel - amount : channel + amount;
-    return Math.max(0, Math.min(255, next));
-  };
-
-  const toHex = (channel: number) => channel.toString(16).padStart(2, "0");
-  return `#${toHex(shade(r))}${toHex(shade(g))}${toHex(shade(b))}`;
 }
 
 export default useThemeStore;

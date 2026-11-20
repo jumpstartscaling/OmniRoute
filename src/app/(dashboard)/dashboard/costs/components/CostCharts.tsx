@@ -20,10 +20,10 @@ const CHART_COLORS = [
   "#10b981",
   "#06b6d4",
   "#f59e0b",
-  "#8b5cf6",
+  "#7a4e00",
   "#ef4444",
   "#14b8a6",
-  "#6366f1",
+  "#f6c445",
   "#ec4899",
 ];
 
@@ -229,7 +229,7 @@ export function WeeklyPatternCard({
                 borderRadius: "12px",
               }}
             />
-            <Bar dataKey="tokens" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="tokens" fill="#7a4e00" radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

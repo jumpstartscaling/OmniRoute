@@ -1,0 +1,90 @@
+/* Generated from tokens/jump-os.tokens.json — do not edit by hand */
+/* Vendored from jumpstartscaling/jump-os-ui 204d6c924e8a1adbdc9b667a461e7f304f7a701e */
+:root, .jos-ui {
+  --jos-font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --jos-font-body: 16px;
+  --jos-font-label: 13px;
+  --jos-font-title: 32px;
+  --jos-font-metric: 28px;
+  --jos-line-height-body: 1.45;
+  --jos-space-1: 4px;
+  --jos-space-2: 8px;
+  --jos-space-3: 12px;
+  --jos-space-4: 16px;
+  --jos-space-5: 24px;
+  --jos-space-6: 32px;
+  --jos-space-7: 48px;
+  --jos-radius-control: 8px;
+  --jos-radius-panel: 12px;
+  --jos-radius-pill: 999px;
+  --jos-focus-width: 2px;
+  --jos-focus-offset: 2px;
+}
+
+.jos-ui, .jos-ui[data-theme="light"], [data-theme="light"] .jos-ui {
+  --jos-canvas: #ffffff;
+  --jos-surface: #ffffff;
+  --jos-ink: #000000;
+  --jos-muted: #3a3a3a;
+  --jos-border: #000000;
+  --jos-accent-ink: #7a4e00;
+  --jos-accent-fill: #f6c445;
+  --jos-accent-on-fill: #000000;
+  --jos-focus: #7a4e00;
+  --jos-status-success-text: #14613c;
+  --jos-status-success-bg: #e7f5ee;
+  --jos-status-warning-text: #9a3412;
+  --jos-status-warning-bg: #f8e6dc;
+  --jos-status-failure-text: #8d2e2e;
+  --jos-status-failure-bg: #f8e6e6;
+  --jos-status-info-text: #1a5278;
+  --jos-status-info-bg: #e6f1f8;
+  --jos-status-unknown-text: #3a3a3a;
+  --jos-status-unknown-bg: #f2f2f2;
+}
+
+.jos-ui[data-theme="dark"], [data-theme="dark"] .jos-ui {
+  --jos-canvas: #000000;
+  --jos-surface: #000000;
+  --jos-ink: #ffffff;
+  --jos-muted: #d0d0d0;
+  --jos-border: #ffffff;
+  --jos-accent-ink: #f6c445;
+  --jos-accent-fill: #f6c445;
+  --jos-accent-on-fill: #000000;
+  --jos-focus: #f6c445;
+  --jos-status-success-text: #b7ebcf;
+  --jos-status-success-bg: #000000;
+  --jos-status-warning-text: #f6c7a8;
+  --jos-status-warning-bg: #000000;
+  --jos-status-failure-text: #f3b7b7;
+  --jos-status-failure-bg: #000000;
+  --jos-status-info-text: #b9d7ee;
+  --jos-status-info-bg: #000000;
+  --jos-status-unknown-text: #d0d0d0;
+  --jos-status-unknown-bg: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+.jos-ui:not([data-theme="light"]) {
+  --jos-canvas: #000000;
+  --jos-surface: #000000;
+  --jos-ink: #ffffff;
+  --jos-muted: #d0d0d0;
+  --jos-border: #ffffff;
+  --jos-accent-ink: #f6c445;
+  --jos-accent-fill: #f6c445;
+  --jos-accent-on-fill: #000000;
+  --jos-focus: #f6c445;
+  --jos-status-success-text: #b7ebcf;
+  --jos-status-success-bg: #000000;
+  --jos-status-warning-text: #f6c7a8;
+  --jos-status-warning-bg: #000000;
+  --jos-status-failure-text: #f3b7b7;
+  --jos-status-failure-bg: #000000;
+  --jos-status-info-text: #b9d7ee;
+  --jos-status-info-bg: #000000;
+  --jos-status-unknown-text: #d0d0d0;
+  --jos-status-unknown-bg: #000000;
+}
+}

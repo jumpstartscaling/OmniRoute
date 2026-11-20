@@ -18,7 +18,7 @@ export function IoNode({ data }: NodeProps) {
   const { variant, tokens, savingsPercent } = data as IoNodeData;
 
   const isInput = variant === "input";
-  const color = isInput ? "#6366f1" : "#22c55e"; // indigo for input, green for output
+  const color = isInput ? "#f6c445" : "#22c55e"; // amber fill for input, green for output
 
   return (
     <div

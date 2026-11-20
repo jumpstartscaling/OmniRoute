@@ -7,11 +7,11 @@ const FEATURES = [
     titleKey: "featureUnifiedEndpointTitle",
     descKey: "featureUnifiedEndpointDesc",
     colors: {
-      border: "hover:border-blue-500/50",
-      bg: "hover:bg-blue-500/5",
-      iconBg: "bg-blue-500/10",
-      iconText: "text-blue-500",
-      titleHover: "group-hover:text-blue-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
   {
@@ -19,11 +19,11 @@ const FEATURES = [
     titleKey: "featureEasySetupTitle",
     descKey: "featureEasySetupDesc",
     colors: {
-      border: "hover:border-orange-500/50",
-      bg: "hover:bg-orange-500/5",
-      iconBg: "bg-orange-500/10",
-      iconText: "text-orange-500",
-      titleHover: "group-hover:text-orange-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
   {
@@ -31,11 +31,11 @@ const FEATURES = [
     titleKey: "featureModelFallbackTitle",
     descKey: "featureModelFallbackDesc",
     colors: {
-      border: "hover:border-rose-500/50",
-      bg: "hover:bg-rose-500/5",
-      iconBg: "bg-rose-500/10",
-      iconText: "text-rose-500",
-      titleHover: "group-hover:text-rose-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
   {
@@ -43,11 +43,11 @@ const FEATURES = [
     titleKey: "featureUsageTrackingTitle",
     descKey: "featureUsageTrackingDesc",
     colors: {
-      border: "hover:border-purple-500/50",
-      bg: "hover:bg-purple-500/5",
-      iconBg: "bg-purple-500/10",
-      iconText: "text-purple-500",
-      titleHover: "group-hover:text-purple-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
   {
@@ -55,11 +55,11 @@ const FEATURES = [
     titleKey: "featureOAuthApiKeysTitle",
     descKey: "featureOAuthApiKeysDesc",
     colors: {
-      border: "hover:border-amber-500/50",
-      bg: "hover:bg-amber-500/5",
-      iconBg: "bg-amber-500/10",
-      iconText: "text-amber-500",
-      titleHover: "group-hover:text-amber-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
   {
@@ -67,11 +67,11 @@ const FEATURES = [
     titleKey: "featureCloudSyncTitle",
     descKey: "featureCloudSyncDesc",
     colors: {
-      border: "hover:border-sky-500/50",
-      bg: "hover:bg-sky-500/5",
-      iconBg: "bg-sky-500/10",
-      iconText: "text-sky-500",
-      titleHover: "group-hover:text-sky-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
   {
@@ -79,11 +79,11 @@ const FEATURES = [
     titleKey: "featureCliSupportTitle",
     descKey: "featureCliSupportDesc",
     colors: {
-      border: "hover:border-emerald-500/50",
-      bg: "hover:bg-emerald-500/5",
-      iconBg: "bg-emerald-500/10",
-      iconText: "text-emerald-500",
-      titleHover: "group-hover:text-emerald-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
   {
@@ -91,11 +91,11 @@ const FEATURES = [
     titleKey: "featureDashboardTitle",
     descKey: "featureDashboardDesc",
     colors: {
-      border: "hover:border-fuchsia-500/50",
-      bg: "hover:bg-fuchsia-500/5",
-      iconBg: "bg-fuchsia-500/10",
-      iconText: "text-fuchsia-500",
-      titleHover: "group-hover:text-fuchsia-400",
+      border: "hover:border-[#f6c445]",
+      bg: "hover:bg-[#f6c445]/10",
+      iconBg: "bg-[#f6c445]",
+      iconText: "text-black",
+      titleHover: "group-hover:text-[#f6c445]",
     },
   },
 ];
@@ -108,14 +108,14 @@ export default function Features() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("powerfulFeatures")}</h2>
-          <p className="text-gray-400 max-w-xl text-lg">{t("featuresSubtitle")}</p>
+          <p className="text-[#d0d0d0] max-w-xl text-lg">{t("featuresSubtitle")}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {FEATURES.map((feature) => (
             <div
               key={feature.titleKey}
-              className={`p-6 rounded-xl bg-[#23180f] border border-[#3a2f27] ${feature.colors.border} ${feature.colors.bg} transition-all duration-300 group`}
+              className={`p-6 rounded-xl bg-[#000000] border border-white ${feature.colors.border} ${feature.colors.bg} transition-all duration-300 group`}
             >
               <div
                 className={`w-10 h-10 rounded-lg ${feature.colors.iconBg} flex items-center justify-center mb-4 ${feature.colors.iconText} group-hover:scale-110 transition-transform duration-300`}
@@ -129,7 +129,7 @@ export default function Features() {
               >
                 {t(feature.titleKey)}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed break-words">
+              <p className="text-sm text-[#d0d0d0] leading-relaxed break-words">
                 {t(feature.descKey)}
               </p>
             </div>
